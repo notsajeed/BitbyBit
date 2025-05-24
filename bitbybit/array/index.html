@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Visualizer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wdth,wght@0,75..100,100..900;1,75..100,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1 class="header">Array Visualizer</h1>
+    <div class="container-grid">
+        <div class="main-container">
+            <div id="canvas-container">
+                <canvas id="canvas" height="450"></canvas>
+            </div>
+            <br>
+            <input type="number" id="index" class="index-input" placeholder="Index">
+            <input type="number" id="value" class="value-input" placeholder="Value" max="100"><br>
+            <button onclick="insertValue()" class="button insert">Insert</button>
+            <button onclick="deleteValue()" class="button delete">Delete</button>
+            <br>
+            <button onclick="generateRandomArray()" class="button random-array-button">Generate Random Array</button>
+            <button onclick="sortArray()" class="button sort-array-button">Sort Array</button>
+            <br>
+            <input type="number" id="searchValue" placeholder="Search Value" class="search-value"><br>
+            <button onclick="linearSearch()" class="button">Linear Search</button>
+            <button onclick="binarySearch()" class="button">Binary Search</button>
+            <div id="search-steps-head"></div>
+            <div id="search-steps"></div>
+        </div>
+
+        <div class="about-array">
+           
+            <p> <h3>Array:</h3> A collection of elements stored in contiguous memory locations. Each element is accessed using an index.</p>
+
+            <p> <h3>Indexing:</h3> The position of an element in an array, starting from 0 for the first element.</p>
+        
+            <p> <h3>Insertion:</h3> Adding a new element at a specific position in the array. <br> 
+            If inserting in the middle or beginning, elements need to be shifted.</p>
+            
+            <p> <h3>Deletion:</h3> Removing an element from the array. <br> 
+            If removing from the middle or beginning, elements must be shifted left to fill the gap.</p>
+            <h3>Searching:</h3> Finding an element in an array. <br> 
+            Common methods include:</p>
+            <ul>
+                <li>Linear Search (checking each element one by one)</li>
+                <li>Binary Search (dividing the array into halves, works only on sorted arrays)</li>
+            </ul>
+            
+            <p> <h3>Traversal:</h3> Accessing each element of the array one by one.</p>
+            
+            <p> <h3>Sorting:</h3> Arranging elements in ascending or descending order, using techniques like:</p>
+            <ul>
+                <li>Bubble Sort</li>
+                <li>Selection Sort</li>
+                <li>Quick Sort, etc.</li>
+            </ul> 
+        </div>
+
+        <div class="side-notes" id="side-notes">
+           <button class="more-info-button">More info</button>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+
+</body>
+</html>
